@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tasks</title>
+    
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <!--My CSS-->
+    <link rel="stylesheet" href="css/styles.css">
+    <!--Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>   
+    
+</head>
+<!--calls the fomula to fetch the issues from LocalMemory to display them on the page-->
+<body onload="fetchIssues()">
+
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills float-right">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="open.html">Open Issues</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="closed.html">Closed Issues</a>
+            </li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">JS Issue Tracker</h3>
+      </div>
+
+      <div class="jumbotron">
+        <p class="lead">Edit Issue</p>
+<!--=== Form ===-->        
+        <form action="" id="issueInputForm">
+            <div class="form-group">
+                <label for="">Issue</label>
+                <input type="text" class="form-control" id="issueTitleInput" placeholder="Enter issue">
+            </div>           
+            <div class="form-group">
+                <laber>Severity</laber>
+                <select name="" id="issueSeverityInput" class="form-control" required>
+                    <option>Choose one</option>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="">Description</label>
+                <input type="text" class="form-control" id="issueDescInput" placeholder="Issue">
+            </div>
+            <div class="form-contol">
+                <button type="submit" class="btn btn-block btn-primary">Add</button>
+            </div>
+        </form>
+<!--end of Form-->
+      </div>
+
+      <footer class="footer">
+        <p>&copy; Javier Calderon</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+   
+<!--==================-Scripts-================-->
+<!-- Placed at the end of the document so the pages load faster -->
+<!--JQuery 3.x, minified-->
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<!--Chance JS-->
+<script src="http://chancejs.com/chance.min.js"></script>
+<!--Bootstrap JS-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<!--My JS-->
+<script src="js/main.js"></script>
+
+</body>
+</html>
